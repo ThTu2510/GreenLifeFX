@@ -1,0 +1,459 @@
+@media (max-width: 1440px) {
+    /* Laptop thường */
+    
+  }
+
+  @media (max-width: 769px) {
+    /* điện thoại */
+    html,body{
+        overflow-x: hidden;
+    }
+ 
+    nav {
+        width: 100%;;
+        background-color: rgb(2, 71, 71);
+        padding:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    .logo img{
+        width:100px;
+        height: 60px;
+    }
+    
+    
+    ul{
+        width: 50%;
+        height: 130px;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 100%;
+        right: 0;
+        background-color: rgb(2, 71, 71);
+        z-index: 100;
+    }
+    
+    ul li{
+        width:350px;
+        height:100px;
+        padding: 0px 15px;
+        text-align: center;
+    }
+
+    ul li a{
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-block;
+        transition:  0.2s;
+    }
+
+    ul li a:hover{
+        background-color: white;
+        color: rgb(2, 71, 71);
+        border-radius: 20px;
+        transition:  0.2s;
+    }
+    
+    button{
+        display: none;
+    }
+    
+    .bar{
+        font-size: 2rem;
+        color: white;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .fa-square-xmark {
+        display: none;
+      }
+
+    ul.active {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        
+    }
+    .bar.active .fa-square-xmark {
+        display: inline-block;
+    }
+    .bar.active .fa-bars{
+        display: none;
+    }
+    .title-header{
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: white;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    h1{
+        padding: 30px 0px;
+        font-size: 1.5rem;
+        color: greenyellow;
+        align-items: center;
+    }
+    h4{
+        font-size: 1.2rem;
+        padding: 0px 70px;
+    }
+    /* slide translate */
+    .trans-slides-header{
+    width: 100%;
+    height: 55vh;
+    /* background-color: green; */
+    margin: auto;
+    display: flex;
+    position: relative;
+    }
+    
+    .trs-slide{
+    width: 85%;
+    height: 80%;
+    /* background-color: yellow; */
+    margin: auto;
+    overflow: hidden;
+    }
+    
+    .leftarrow, .rightarrow{
+    display: none;
+    }
+    
+    .dots {
+    position: absolute;
+    /* background-color: rgb(8, 250, 8); */
+    width: 300px;
+    height: 50px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    gap: 20px;
+    }
+    /* SECTION 2 - ABOUT */
+    .content1{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+    
+    .content1 h1::after{
+    display: none;
+    }
+
+    .content1 p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 5vw;
+    margin-top: -20px;
+    }
+
+    .content2{
+    width: 95%;
+    height: 75%;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    }
+
+    .img{
+    position: relative;
+    width: 55%;
+    height: 60%;
+    display: flex;
+    border: 3px solid white;
+    border-top-right-radius:30px;
+    border-bottom-left-radius: 30px;
+    top: 20%;
+    left: -10%;
+    z-index: 1;
+    
+    }
+
+    .img img{
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .texts{
+    display: flex;
+    flex-direction: column;   
+    width: 40%;
+    }
+
+    .title-block{
+    /* background-color: aqua; */
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    left: -70%;
+    }
+    
+    .title{
+    width: fit-content;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid yellowgreen;
+    background-color: yellow;
+    padding: 0px 10px;
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .text-block{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    position: relative;
+    left: -50%;
+    top: 10%;
+    }
+
+    .Historical, .Mission{
+    width: 220px;
+    font-size: 0.9rem;
+    color: white;
+    position: absolute;
+    }
+
+
+    .title-cnt{
+    display: flex;
+    flex-direction: column;
+    color: rgb(221, 255, 0);
+    width: 30%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    gap:35px;
+    margin-top: -5px;
+    margin-left: -30px;
+    
+    }
+
+    .progress-bar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    align-items:center ;
+    margin-top: 25px;
+    left: -15%;
+    }
+
+    .progress {
+    background-color: #c7c5c5;
+    border-radius: 20px;
+    height: 20px;
+    width: 220px;
+    }
+
+    .progress-done{
+    background-image: linear-gradient(135deg,#fff720 10%, #3cd500 100%);
+    border-radius: 20px ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    }
+
+    /* SECTION 3 - SERVICES */
+    section3{
+        width: 100%;
+        height: 100vh;
+        background-image: url("bgr.png") ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .services h1::after{
+    display: none;
+    }
+
+    .sv-cnt{
+    width: 100%;
+    height: 83vh ;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+    }
+    .sv-video{
+    order:1;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    
+    }
+    .speed{
+        display: none;
+    }
+
+    video{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    outline: none;
+    }
+
+    .sv-faq{
+    order:2;
+    margin-top: -40px;
+    width: 100%;
+    border-right: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-list{
+    border-right: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid rgb(78, 160, 78);
+    }
+
+    .faq-question{
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    .faq-answer{
+    display: none;
+    width: 100%;
+    font-size: 12px;
+    }
+
+    h4{
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    text-align: center;
+    }
+    /* SECTION 4 - PRICE */
+    .price h1::after{
+    display: none;
+    }
+    .price-table{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    }
+    .table{
+    width: 30%;
+    height: 70%;
+    background-color: #ffffff;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+    }
+    .table.active{
+    transform: scale(1.3);
+    z-index: 10;
+    }
+    .benefit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+    }
+    .benefit p{
+    border-bottom: 1px dashed black ;
+    }
+    .icon{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 35PX;
+    right: -13px;
+    position: absolute;
+    }
+    i.fa-circle-check{
+    color: green;
+    font-size: 1rem;
+    }
+    i.fa-circle-xmark{
+    color: red;
+    font-size: 1rem;
+    }
+    
+    /* SECTION 5 - CONTACT */
+    .contact h1::after{
+    display: none;
+    }
+    form{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 50px;
+    }
+    .form-group input{
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    }
+    .form-group select{
+    width: 400px;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 10px;
+    }
+    .cnt-contact{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+}

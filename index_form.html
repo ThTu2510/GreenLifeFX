@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google sheet Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="google-form" method="GET" action="https://script.google.com/macros/s/AKfycbwujXEhJj2IPxXFceF-ZxcNd3OJZxJWUN1gckLDuvn4vbQFheoVe8Jz5yR5_69rXbe9cQ/exec">
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="fullname">Your Full Name:</label>
+                <input type="text" class="form-control" id="name" name="fullname">
+            </div>
+            <div class="form-group">
+                <label>Your message:</label>
+                <input type="text" class="form-control" id="message" name="message">
+            </div>
+            <button type="submit" class="btn btn-default" id="submit-form">Submit</button>
+        </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        { 
+        var submit = $("button[type='submit']");
+        submit.click(function()
+                    {
+                        var data = $('form#google-form').serialize();
+                        $.ajax({
+                                    type : 'GET', 
+                                    url : 'https://script.google.com/macros/s/AKfycbwujXEhJj2IPxXFceF-ZxcNd3OJZxJWUN1gckLDuvn4vbQFheoVe8Jz5yR5_69rXbe9cQ/exec',
+                                    dataType:'json',
+                                    crossDomain : true,
+                                    data : data,
+                                    success : function(data)
+                                { 
+                        if(data == 'false') 
+                                {
+                                    alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
+                                }else{
+                                    alert('Đã thêm dữ liệu vào Form');
+                                }
+                    }
+            });
+            return false;
+        });
+        });
+    </script>
+</body>
+</html>
